@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <!-- boilerplate -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- content -->
+        <title>Works Cited | US Tornado Dataset</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+        <!-- scripts -->
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> <!-- includes Popper.js -->
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/morph/bootstrap.min.css"> includes Morph theme -->
+
+    </head>
+
+    <body>
+
+        <!-- Header Section -->
+    <div class="container-fluid bg-dark text-white text-center py-4">
+        <h1>Tornadoes In US (1950-2021)</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+        <a href="https://www.kaggle.com/datasets/danbraswell/us-tornado-dataset-1950-2021" target="_blank">Click here for link to study</a>
+    </div>
+
+        <!-- navbar section -->
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a href="/" class="nav-link active">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/dashboard1" class="nav-link">Tornado Trends</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/dashboard2" class="nav-link">Tornado Metrics</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/map" class="nav-link">Map</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/about-us" class="nav-link">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/work-cited" class="nav-link">Works Cited</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        
+        <div class="container">
+            <h1>Works Cited</h1>
+            <p class="lead">Sources and references used in the Tornado Data App</p>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <h2>References</h2>
+        <ul class="list-group">
+            <li class="list-group-item">
+                Theme: <a href="https://bootswatch.com/morph/" target="_blank">https://bootswatch.com/morph/</a>
+            </li>
+            <li class="list-group-item">
+                Tornado Data Set: <a href="https://www.kaggle.com/datasets/danbraswell/us-tornado-dataset-1950-2021/data?select=us_tornado_dataset_1950_2021.csv" target="_blank">Kaggle Data Set</a>
+            </li>
+            <li class="list-group-item">
+                How Tornadoes Are Formed Picture: <a href="https://scied.ucar.edu/sites/default/files/styles/extra_large/public/media/images/shutterstock_172831265.jpg.webp" target="_blank">View Image</a>
+            </li>
+            <li class="list-group-item">
+                Enhanced Fujita Scale Picture: <a href="https://media.defense.gov/2009/Feb/10/2000626851/-1/-1/0/090210-F-6936T-001.JPG" target="_blank">View Image</a>
+            </li>
+            <li class="list-group-item">
+                History on Tornadoes: <a href="https://journals.ametsoc.org/configurable/content/journals$002fbams$002f105$002f7$002fBAMS-D-23-0031.1.xml" target="_blank">Read More</a>
+            </li>
+            <li class="list-group-item">
+                Enhanced Fujita Scale Information: <a href="https://www.weather.gov/lsx/enhancedfujitascale" target="_blank">Weather.gov</a>
+            </li>      
+        </ul>
+    </section>
+        <!-- content section -->
+        <!-- ... -->
+
+    </body>
+     <!-- Script for setting active class on navigation links -->
+     <script>
+        // Function to highlight the active link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = window.location.pathname;  // Get the current URL path
+            const navLinks = document.querySelectorAll('.nav-link');  // Select all nav links
+
+            navLinks.forEach(link => {
+                // Remove the 'active' class from all links
+                link.classList.remove('active');
+                
+                // If the link href matches the current URL, add the 'active' class
+                if (link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</html>

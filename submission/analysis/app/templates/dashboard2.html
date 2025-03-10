@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tornadoes In US (1950-2021)</title>
+
+    <!-- JS Imports -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.1/js/dataTables.min.js"></script>
+
+    <!-- CSS Imports -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/morph/bootstrap.min.css"> includes Morph theme -->
+    <link href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header section -->
+    <div class="container-fluid bg-dark text-white text-center py-4">
+        <h1>Tornadoes In US (1950-2021)</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+        <a href="https://www.kaggle.com/datasets/danbraswell/us-tornado-dataset-1950-2021" target="_blank">
+            Click here for link to study
+        </a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/dashboard1" class="nav-link">Tornado Trends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/dashboard2" class="nav-link active">Tornado Metrics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/map" class="nav-link">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about-us" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/work-cited" class="nav-link">Works Cited</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <br>
+        <div class="row">
+            <div class="col-md-12 text-center bg-light">
+                <label for="year">Year</label>
+                <input id="year" name="year" type="number" min="1950" max="2021">
+                <button id="filter-btn">Filter!</button>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="row">
+            <div class="col-md-6">
+                <div id="histogram"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="time-series"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div id="chart"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="pie-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="static/js/app2.js"></script>
+    <!-- Script for setting active class on navigation links -->
+        
+    <script>
+        // Function to highlight the active link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = window.location.pathname;  // Get the current URL path
+            const navLinks = document.querySelectorAll('.nav-link');  // Select all nav links
+
+            navLinks.forEach(link => {
+                // Remove the 'active' class from all links
+                link.classList.remove('active');
+                
+                // If the link href matches the current URL, add the 'active' class
+                if (link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

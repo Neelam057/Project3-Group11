@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <!-- boilerplate -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- content -->
+        <title>About Us | US Tornado Dataset</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+        <!-- scripts -->
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> <!-- includes Popper.js -->
+
+    </head>
+
+    <body>
+
+        <!-- Header Section -->
+    <div class="container-fluid bg-dark text-white text-center py-4">
+        <h1>Tornadoes In US (1950-2021)</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+        <a href="https://www.kaggle.com/datasets/danbraswell/us-tornado-dataset-1950-2021" target="_blank">Click here for link to study</a>
+    </div>
+
+        <!-- navbar section -->
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a href="/" class="nav-link active">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/dashboard1" class="nav-link">Tornado Trends</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/dashboard2" class="nav-link">Tornado Statistics</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/map" class="nav-link">Map</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/about-us" class="nav-link">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/work-cited" class="nav-link">Works Cited</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center">About Us</h1>
+        <p class="lead text-center">Learn more about our project and the team behind it.</p>
+        
+        <section class="mt-5">
+            <h2>Project Overview</h2>
+            <p>This project aims to provide an interactive visualization of tornado data across the United States. Using D3.js, Leaflet, and Plotly, we present a dynamic map and various analytical charts to explore historical tornado patterns.</p>
+        </section>
+        
+        <section class="mt-5">
+            <h2>Meet the Team</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Cassidy Bell</h3>
+                    <p> GitHub Link: <br><a href="https://github.com/cvbell624" target="_blank">https://github.com/cvbell624</a></p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Neelam Prasad</h3>
+                    <p> GitHub Link: <a href="https://github.com/Neelam057" target="_blank">https://github.com/Neelam057</a></p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Aaron Suarez</h3>
+                    <p> GitHub Link: <a href="https://github.com/Apeterson07" target="_blank">https://github.com/Apeterson07</a></p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Tyler Beringer</h3>
+                    <p> GitHub Link: <br><a href="https://github.com/99btyler" target="_blank">https://github.com/99btyler</a></p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-5">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or suggestions, feel free to reach out.</p>
+        </section>
+    </div>
+        <!-- Script for setting active class on navigation links -->
+        <script>
+        // Function to highlight the active link
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = window.location.pathname;  // Get the current URL path
+            const navLinks = document.querySelectorAll('.nav-link');  // Select all nav links
+
+            navLinks.forEach(link => {
+                // Remove the 'active' class from all links
+                link.classList.remove('active');
+                
+                // If the link href matches the current URL, add the 'active' class
+                if (link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        </script>
+</html>
